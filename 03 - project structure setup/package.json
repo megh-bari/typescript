@@ -1,0 +1,16 @@
+{
+  "name": "03---project-structure-setup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
