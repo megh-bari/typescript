@@ -14,7 +14,8 @@ console.log("Hey");
 // }
 
 class User {
-  private _courseCount = 1; // cannot access outside the class
+  // private _courseCount = 1; // cannot access outside the class
+  protected _courseCount = 1; // use in same class or any class which inherits
 
   readonly city: string = "";
   constructor(public email: string, public name: string) {}
@@ -36,13 +37,21 @@ class User {
   }
 }
 
-const megh = new User("megh@megh.in", "megh");
+// inherits
+class SubUser extends User {
+  isFamily:  boolean = true
+  changeCourseCount(){
+    this._courseCount = 4
+  }
+}
 
+const megh = new User("megh@megh.in", "megh");
 
 console.log(megh);
 // megh.city = "mumbai";
 // megh.city; // i can access but can't modify
 
-console.log(megh.city); 
+console.log(megh.city);
 
 console.log(megh.getRandomEmail);
+
